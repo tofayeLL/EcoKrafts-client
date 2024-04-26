@@ -1,12 +1,11 @@
 
-
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AUthContext } from "../../providers/AuthProvider";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
-import { Helmet } from "react-helmet";
+
 
 const Register = () => {
     const [showPass, setShowPass] = useState(false);
@@ -24,6 +23,16 @@ const Register = () => {
 
         // validation for password
         setErrorRegister('');
+
+        if (password.length < 6) {
+
+            return toast.error(" passwords must be 6 characters!");
+        }
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+
+            return toast.error("password must have included small and capital letter!");
+        }
+
 
 
 
@@ -45,23 +54,21 @@ const Register = () => {
 
     return (
         <div>
-            <Helmet>
-                <title>Register</title>
-            </Helmet>
+           
 
-            <div className="flex flex-col justify-center items-center bg-violet-300 py-4 ">
+            <div className="flex flex-col  justify-center items-center bg-violet-300 py-4">
 
 
-                <div className="flex flex-col justify-center  lg:w-[100vh] mx-auto space-y-3 my-6 bg-white shadow-xl lg:px-0 px-8  lg:py-12 py-6 rounded-md" >
+                <div className="flex flex-col justify-center lg:w-[100vh] w-[80%] mx-auto space-y-4 my-6 bg-white shadow-xl lg:px-0   px-5  lg:py-12 py-6 rounded-md " >
 
 
 
-                    <div className=" mx-auto text-violet-600 ">
+                    <div className=" mx-auto text-purple-500">
                         <h1 className="lg:text-4xl text-xl font-bold mb-6">Create an account</h1>
                     </div>
 
 
-                    <form onSubmit={handleRegister} className="lg:w-[70%] w-[90vh] mx-auto space-y-5  rounded-lg ">
+                    <form onSubmit={handleRegister} className="lg:w-[70%] w-full mx-auto space-y-5 rounded-lg " >
 
                         <div >
                             <p className="mb-1 font-medium">User Name</p>
@@ -96,7 +103,7 @@ const Register = () => {
 
 
                         <div>
-                            <button className="btn text-white text-lg w-full bg-violet-500" type="submit">Register</button>
+                            <button className="btn text-white text-lg w-full bg-purple-600" type="submit">Register</button>
                         </div>
 
 
@@ -108,7 +115,7 @@ const Register = () => {
 
 
                     <div className="text-center ">
-                        <p className="font-medium mt-6 text-sm mr-2">have an account ?   Please  <Link to={'/login'} className="btn-active text-violet-800 btn-link">Login</Link></p>
+                        <p className="font-medium mt-6  lg:text-base text-sm mr-2">have an account ?   Please  <Link to={'/login'} className="btn-active text-violet-800 btn-link">Login</Link></p>
                     </div>
 
 
