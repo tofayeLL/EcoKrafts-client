@@ -4,10 +4,12 @@ import Nav from "../pages/Shared/Nav";
 
 const Root = () => {
     return (
-        <div>
-            <Nav></Nav>
+        <div className="container mx-auto lg:px-8 px-2">
+            <div className="sticky top-0 z-50">
+                <Nav></Nav>
+            </div>
             <Outlet></Outlet>
-            
+
         </div>
     );
 };
