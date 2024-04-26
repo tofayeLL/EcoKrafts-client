@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 const Register = () => {
     const [showPass, setShowPass] = useState(false);
     const [errorRegister, setErrorRegister] = useState('');
-    const { createUser } = useContext(AUthContext);
+    const { createUser, updateUser } = useContext(AUthContext);
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -30,7 +30,7 @@ const Register = () => {
         }
         if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
 
-            return toast.error("password must have included small and capital letter!");
+            return toast.error("password must have included at least one small and capital letter!");
         }
 
 
@@ -41,6 +41,7 @@ const Register = () => {
             .then((result) => {
                 console.log(result.user);
                 toast.success("Registration complete Successfully");
+                updateUser(name, photo);
                 e.target.reset();
             })
             .catch((error) => {
@@ -54,7 +55,7 @@ const Register = () => {
 
     return (
         <div>
-           
+
 
             <div className="flex flex-col  justify-center items-center bg-violet-300 py-4">
 
