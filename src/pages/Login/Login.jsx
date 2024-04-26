@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AUthContext } from "../../providers/AuthProvider";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,10 @@ import { toast } from "react-toastify";
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
-    const { signInUser } = useContext(AUthContext);
+    const { signInUser, googleLogin } = useContext(AUthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
 
 
     const handleLogin = (e) => {
@@ -22,6 +25,7 @@ const Login = () => {
         signInUser(email, password)
             .then((result) => {
                 console.log(result.user);
+                navigate(location?.state ? location.state : '/');
                 e.target.reset();
                 toast.success("Login Successfully");
             })
@@ -34,12 +38,26 @@ const Login = () => {
     }
 
 
+    // Google Login
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then((result) => {
+                console.log(result.user);
+                navigate(location?.state ? location.state : '/');
+                toast.success("Login Successfully");
+            })
+            .catch((error) => {
+                console.log(error.message);
+            })
+    }
+
+
 
     return (
         <div>
 
             <div className="flex flex-col  justify-center items-center bg-violet-300 py-4">
-               
+
 
                 <div className="flex flex-col justify-center  lg:w-[100vh] w-[80%]  mx-auto space-y-4 my-6 bg-white shadow-xl lg:px-0 px-5  lg:py-12 py-6 rounded-md" >
 
@@ -59,7 +77,7 @@ const Login = () => {
 
                         <div >
                             <p className="mb-1 font-medium"> Password</p>
-                            
+
                             <div className="relative">
                                 <input type={showPass ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered w-full" required />
 
@@ -85,7 +103,7 @@ const Login = () => {
 
 
                     <div className="lg:w-[70%] w-full mx-auto" >
-                        <Link><button className="btn w-full bg-purple-500 text-white"><FaGoogle className="text-2xl" ></FaGoogle> <span className="text-lg">Login with Google</span></button></Link>
+                        <Link><button onClick={handleGoogleLogin} className="btn w-full bg-purple-500 text-white"><FaGoogle className="text-2xl" ></FaGoogle> <span className="text-lg">Login with Google</span></button></Link>
                     </div>
 
                     <div className="lg:w-[70%] w-full mx-auto">

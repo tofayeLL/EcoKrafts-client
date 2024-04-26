@@ -12,8 +12,8 @@ const Nav = () => {
     const links = <>
         <li className="font-medium text-base"><NavLink to={'/'}>Home</NavLink></li>
         <li className="font-medium text-base"><NavLink to={'/allCrafts'}>All Crafts</NavLink></li>
-        <li className="font-medium text-base"><NavLink to={'/addCrafts'}>Add Crafts</NavLink></li>
-        <li className="font-medium text-base"><NavLink to={'/myAddedCrafts'}>My Added Crafts</NavLink></li>
+        <li className="font-medium text-base"><NavLink to={'/addCraft'}>Add Crafts</NavLink></li>
+        <li className="font-medium text-base"><NavLink to={'/myCraft'}>My Added Crafts</NavLink></li>
 
     </>
 

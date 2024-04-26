@@ -4,6 +4,9 @@ import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import AddCraft from "../pages/AddCraft/AddCraft";
+import MyCraft from "../pages/MyCraft/MyCraft";
+import ProtectedRoutes from "../ProtectedRoutes/ProtectedRoutes";
 
 
 
@@ -25,6 +28,15 @@ import Login from "../pages/Login/Login";
         {
             path:'/login',
             element:<Login></Login>
+        },
+        {
+            path:'/addCraft',
+            element:<ProtectedRoutes><AddCraft></AddCraft></ProtectedRoutes>
+        },
+        
+        {
+            path:'/myCraft',
+            element:<ProtectedRoutes><MyCraft></MyCraft></ProtectedRoutes>
         },
         
 
