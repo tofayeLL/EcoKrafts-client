@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "../firebase/Firebase.config";
 import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider } from "firebase/auth";
 
 
 
@@ -12,6 +13,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 export const AUthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 
 const AuthProvider = ({ children }) => {
@@ -46,6 +48,11 @@ const AuthProvider = ({ children }) => {
         });
     }
 
+    // github login
+    const githubLogin = () => {
+      return  signInWithPopup(auth, githubProvider);
+    }
+
 
 
 
@@ -71,7 +78,8 @@ const AuthProvider = ({ children }) => {
         logOutUser,
         updateUser,
         loading,
-        googleLogin
+        googleLogin,
+        githubLogin
 
     }
     return (

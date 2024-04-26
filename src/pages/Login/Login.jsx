@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
-    const { signInUser, googleLogin } = useContext(AUthContext);
+    const { signInUser, googleLogin, githubLogin } = useContext(AUthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -50,6 +50,23 @@ const Login = () => {
                 console.log(error.message);
             })
     }
+
+
+    // Git hub Login
+    const handleGitLogin = () => {
+        githubLogin()
+            .then((result) => {
+                console.log(result.user);
+                navigate(location?.state ? location.state : '/');
+                toast.success("Login Successfully");
+
+            })
+            .catch((error) => {
+                console.log(error.message);
+            })
+
+    }
+
 
 
 
@@ -107,7 +124,7 @@ const Login = () => {
                     </div>
 
                     <div className="lg:w-[70%] w-full mx-auto">
-                        <Link><button className="btn w-full bg-purple-500 text-white"><FaGithub className="text-2xl"></FaGithub><span className="text-lg">Login with Github</span></button></Link>
+                        <Link><button onClick={handleGitLogin} className="btn w-full bg-purple-500 text-white"><FaGithub className="text-2xl"></FaGithub><span className="text-lg">Login with Github</span></button></Link>
                     </div>
 
 
