@@ -1,39 +1,53 @@
 
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AUthContext } from "../../providers/AuthProvider";
+import { FiEye, FiEyeOff } from "react-icons/fi";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
+    const [showPass, setShowPass] = useState(false);
+    const [errorRegister, setErrorRegister] = useState('');
+    const { createUser } = useContext(AUthContext);
 
-    const {createUser} = useContext(AUthContext);
-  
     const handleRegister = (e) => {
         e.preventDefault()
-        const form = new FormData(e.currentTarget);
-        const name = form.get('name');
-        const photo = form.get('photo');
-        const email = form.get('email');
-        const password = form.get('password');
+        const form = e.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(name, email, photo, password);
+
+        // validation for password
+        setErrorRegister('');
+
+
 
         // create user
         createUser(email, password)
-        .then((result) => {
-            console.log(result.user);
-        })
-        .catch((error) => {
-            console.log(error.message);
-        })
+            .then((result) => {
+                console.log(result.user);
+                toast.success("Registration complete Successfully");
+                e.target.reset();
+            })
+            .catch((error) => {
+                console.log(error.message);
+                setErrorRegister(error.message);
+
+            })
     }
-
-
-
 
 
 
     return (
         <div>
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
 
             <div className="flex flex-col justify-center items-center bg-violet-300 py-4 ">
 
@@ -47,7 +61,7 @@ const Register = () => {
                     </div>
 
 
-                    <form onSubmit={handleRegister} className="lg:w-[70%] mx-auto space-y-5  rounded-lg ">
+                    <form onSubmit={handleRegister} className="lg:w-[70%] w-[90vh] mx-auto space-y-5  rounded-lg ">
 
                         <div >
                             <p className="mb-1 font-medium">User Name</p>
@@ -66,18 +80,18 @@ const Register = () => {
 
                         <div >
                             <p className="mb-1 font-medium"> Password</p>
-                            <input type="password" name="password" placeholder="password" className="input input-bordered w-full" required />
-                           {/*  <div className="relative">
+
+                            <div className="relative">
                                 <input type={showPass ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered w-full" required />
 
                                 <span onClick={() => setShowPass(!showPass)} className="absolute top-3 right-3">{showPass ? <FiEyeOff className="text-xl" ></FiEyeOff> : <FiEye className="text-xl"></FiEye>}</span>
 
-                            </div> */}
+                            </div>
                         </div>
 
                         <div className="text-center">
 
-                         {/* <p className="text-red-500 text-bold">{errorRegister.replace('auth/', '')}</p> */}
+                            <p className="text-red-500 lg:text-lg text-sm font-semibold">{errorRegister.replace('auth/', '')}</p>
                         </div>
 
 
