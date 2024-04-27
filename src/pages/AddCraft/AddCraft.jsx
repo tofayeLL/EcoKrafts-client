@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AUthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddCraft = () => {
@@ -25,8 +26,33 @@ const AddCraft = () => {
         const stockStatus = form.stockStatus.value;
         const subCategory = category;
         const photo = form.photo.value;
-        const newCraft = { name, price, description, customization, processing, subCategory, rating, stockStatus, photo }
-        console.log(newCraft);
+        const username = user.displayName;
+        const email = user.email
+        const craft = { name, price, description, customization, processing, subCategory, rating, stockStatus, photo, username, email }
+        console.log(craft);
+
+        // post
+        fetch('http://localhost:5000/crafts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(craft)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+
+
 
     }
     return (
@@ -118,7 +144,7 @@ const AddCraft = () => {
                                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  input-bordered"
                                     onChange={handleCategory} value={category}>
                                     <option >Choose a category</option>
-                                    <option value="Wooden Furnitures">Wooden Furnitures</option>
+                                    <option value="Wooden Furniture & Sculptures">Wooden Furniture & Sculptures</option>
                                     <option value="Wooden Home Decor">Wooden Home Decor</option>
                                     <option value="Wooden Kitchenware">Wooden Kitchenware</option>
                                     <option value="Jute Home Decor">Jute Home Decor</option>
@@ -150,13 +176,13 @@ const AddCraft = () => {
                         <label className="label">
                             <span className="label-text font-semibold">User Name</span>
                         </label>
-                        <input type="text" name="username" defaultValue={user?.displayName || 'Tofayel'} placeholder="Enter user name " className="input input-bordered" required />
+                        <input type="text" defaultValue={user?.displayName || 'Tofayel'} placeholder="Enter user name " className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">User Email</span>
                         </label>
-                        <input type="text" name="email" defaultValue={user?.email || 'toafyel@gmail.com'} placeholder="Enter user email " className="input input-bordered" required />
+                        <input type="text" defaultValue={user?.email || 'toafyel@gmail.com'} placeholder="Enter user email " className="input input-bordered" required />
                     </div>
 
 
