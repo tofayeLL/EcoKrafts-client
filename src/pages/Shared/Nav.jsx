@@ -72,7 +72,7 @@ const Nav = () => {
                     {
                         user ?
                             <div className="flex  justify-center items-center gap-2 ">
-                                <h1>{user.email}</h1>
+                                {/* <h1>{user.email}</h1> */}
                                 
                                 <div className="tooltip tooltip-bottom lg:w-14 w-12 rounded-full border-[2px] border-green-400 z-10 " data-tip={user?.displayName || 'Tofayel'}>
                                     <img className="w-full rounded-full p-1" alt="Tailwind CSS Navbar component" src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} />
