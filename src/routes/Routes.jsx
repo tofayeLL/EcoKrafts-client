@@ -43,7 +43,7 @@ import CraftItemDetails from "../pages/CraftItemDetails/CraftItemDetails";
         {
             path:'/crafts/:id',
             element:<CraftItemDetails></CraftItemDetails>,
-            
+            loader:({params}) => fetch(`http://localhost:5000/crafts/${params.id}`)
         },
         
 
