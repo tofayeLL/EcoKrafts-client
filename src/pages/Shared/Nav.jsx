@@ -78,7 +78,7 @@ const Nav = () => {
                                     <img className="w-full rounded-full p-1" alt="Tailwind CSS Navbar component" src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} />
                                 </div>
 
-                                <button onClick={handleLogout} className="btn lg:text-base text-xs text-purple-600">Logout</button>
+                                <button onClick={handleLogout} className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Logout</button>
 
 
 

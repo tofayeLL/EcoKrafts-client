@@ -79,7 +79,7 @@ const Banner = () => {
                 <div className='lg:space-y-6 md:space-y-3 space-y-2 text-center  '>
                     <h1 className='lg:text-5xl text-xl font-bold'>Eco-Friendly Creations at EcoCrafts</h1>
                     <p className='lg:w-[60%] md:w-[80%] w-full mx-auto lg:text-lg md:text-base text-sm opacity-90'>Explore EcoCrafts, where artistry meets sustainability in every handmade creation. From recycled materials to nature-inspired designs, each item tells a story of environmental stewardship. Join us in crafting a greener future, one eco-friendly masterpiece at a time.</p>
-                    <button className='btn '>Explore More</button>
+                    <button className='btn hover:text-violet-500 bg-violet-500  outline-none text-base font-semibold text-white'>Explore More</button>
                 </div>
 
             </div>
