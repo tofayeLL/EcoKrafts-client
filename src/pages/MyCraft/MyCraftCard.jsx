@@ -1,13 +1,56 @@
 import PropTypes from 'prop-types';
 import { FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const MyCraftCard = ({ craft }) => {
+const MyCraftCard = ({ craft, myCrafts, setMyCrafts }) => {
     const { _id, photo, name, price, rating, customization, stockStatus } = craft;
 
 
     const handleDelete = (_id) => {
-        console.log(_id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You want to delete this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        })
+
+
+            .then((result) => {
+                if (result.isConfirmed) {
+
+                    fetch(`http://localhost:5000/myCrafts/${_id}`, {
+                        method: "DELETE"
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: "Your craft has been deleted.",
+                                    icon: "success"
+                                });
+
+                                // delete from layout
+                                const remainingCraft = myCrafts.filter(kraft => kraft._id !== _id);
+                                setMyCrafts(remainingCraft);
+
+                            }
+                        })
+
+
+
+                }
+            });
+
+
+
+
     }
 
 
@@ -45,9 +88,9 @@ const MyCraftCard = ({ craft }) => {
                             <Link to={`/crafts/${_id}`}> <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Update</button></Link>
                         </div>
                         <div className='flex-1'>
-                             <button onClick={() => handleDelete(_id)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Delete</button>
+                            <button onClick={() => handleDelete(_id)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Delete</button>
                         </div>
-                       
+
                     </div>
                 </div>
 
