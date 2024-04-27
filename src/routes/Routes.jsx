@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import AddCraft from "../pages/AddCraft/AddCraft";
 import MyCraft from "../pages/MyCraft/MyCraft";
 import ProtectedRoutes from "../ProtectedRoutes/ProtectedRoutes";
+import CraftItemDetails from "../pages/CraftItemDetails/CraftItemDetails";
 
 
 
@@ -37,6 +38,12 @@ import ProtectedRoutes from "../ProtectedRoutes/ProtectedRoutes";
         {
             path:'/myCraft',
             element:<ProtectedRoutes><MyCraft></MyCraft></ProtectedRoutes>
+        },
+        
+        {
+            path:'/crafts/:id',
+            element:<CraftItemDetails></CraftItemDetails>,
+            
         },
         
 
