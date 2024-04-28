@@ -85,7 +85,7 @@ const MyCraftCard = ({ craft, myCrafts, setMyCrafts }) => {
                     </div>
                     <div className='flex  gap-4 items-center'>
                         <div className='flex-1'>
-                            <Link to={`/crafts/${_id}`}> <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Update</button></Link>
+                            <Link to={`/myCraft/${_id}`}> <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Update</button></Link>
                         </div>
                         <div className='flex-1'>
                             <button onClick={() => handleDelete(_id)} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400  text-white">Delete</button>
