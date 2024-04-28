@@ -9,6 +9,8 @@ import MyCraft from "../pages/MyCraft/MyCraft";
 import ProtectedRoutes from "../ProtectedRoutes/ProtectedRoutes";
 import CraftItemDetails from "../pages/CraftItemDetails/CraftItemDetails";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
+import AllCrafts from "../pages/AllCrafts/AllCrafts";
+import AllCraftDetails from "../pages/AllCrafts/AllCraftDetails";
 
 
 
@@ -49,9 +51,19 @@ const router = createBrowserRouter([
       {
         path: '/myCraft/:id',
         element: <ProtectedRoutes><UpdateCraft></UpdateCraft></ProtectedRoutes>,
-        loader:({params}) => fetch(`http://localhost:5000/myCraft/${params.id}`)
-        
+        loader: ({ params }) => fetch(`http://localhost:5000/myCraft/${params.id}`)
+
       },
+      {
+        path: '/allCrafts',
+        element: <AllCrafts></AllCrafts>,
+        loader: () => fetch('http://localhost:5000/crafts')
+      },
+      {
+        path: '/craft/:id',
+        element: <ProtectedRoutes><AllCraftDetails></AllCraftDetails></ProtectedRoutes>,
+        loader: ({ params }) => fetch(`http://localhost:5000/craft/${params.id}`)
+      }
 
 
     ]

@@ -49,6 +49,8 @@ const AddCraft = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
+                    form.reset();
+                    
                 }
             })
 
