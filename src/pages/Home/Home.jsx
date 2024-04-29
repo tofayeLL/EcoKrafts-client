@@ -1,3 +1,4 @@
+import Categories from "../Categories/Categories";
 import Banner from "./Banner";
 import CraftItem from "./CraftItem";
 
@@ -11,6 +12,10 @@ const Home = () => {
 
             <div >
                 <CraftItem></CraftItem>
+            </div>
+
+            <div>
+                <Categories></Categories>
             </div>
         
             

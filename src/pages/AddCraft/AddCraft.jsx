@@ -148,10 +148,10 @@ const AddCraft = () => {
                                     <option >Choose a category</option>
                                     <option value="Wooden Furniture & Sculptures">Wooden Furniture & Sculptures</option>
                                     <option value="Wooden Home Decor">Wooden Home Decor</option>
-                                    <option value="Wooden Kitchenware">Wooden Kitchenware</option>
+                                    <option value="Wooden Utensils & Kitchenware">Wooden Utensils & Kitchenware</option>
                                     <option value="Jute Home Decor">Jute Home Decor</option>
-                                    <option value="Jute Kitchenware">Jute Kitchenware</option>
-                                    <option value="Jute and wooden jewellery">Jute and wooden jewellery</option>
+                                    <option value="Jute Kitchenware & Utensils">Jute Kitchenware & Utensils</option>
+                                    <option value="Jute & Wooden Jewellery">Jute & Wooden Jewellery</option>
 
                                 </select>
 

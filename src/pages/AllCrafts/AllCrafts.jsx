@@ -20,8 +20,8 @@ const AllCrafts = () => {
 
 
             <div className="overflow-x-auto bg-white border-[1px] border-[#e0e0e2] rounded-md">
-                <table className="table">
-                    {/* head */}
+                <table className="table ">
+
                     <thead>
                         <tr className="bg-slate-200 text-lg font-semibold ">
                             <th>Craft Name</th>
@@ -41,31 +41,29 @@ const AllCrafts = () => {
                                     <td>{craft.customization}</td>
                                     <td>{craft.stockStatus}</td>
                                     <td>{craft.processing}</td>
-                                    <Link to={`/craft/${craft._id}`}><button><td className="text-violet-500 link font-semibold text-lg ">View Details</td></button></Link>
+                                 
+
+                                    <Link to={`/craft/${craft._id}`}>
+                                        <td className="">
+                                            <span className="lg:px-4 lg:py-2 font-semibold rounded-md bg-violet-400 text-gray-900 flex">
+                                                <span>View Details</span>
+                                            </span>
+                                        </td>
+
+                                    </Link>
+
+
+
                                 </tr>
+
                             )
                         }
 
-
-
-
-
-
-                        {/* row 2 */}
-
-
                     </tbody>
                 </table>
+
+
             </div>
-
-
-
-
-
-
-
-
-
 
 
         </div>

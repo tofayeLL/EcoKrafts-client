@@ -10,7 +10,7 @@ const CraftItemCard = ({ craft }) => {
 
 
             {/* card 1 */}
-            <div className="rounded-md shadow-sm my-6 border-[1px] border-[#e0e0e2] " data-aos="fade-down">
+            <div className="rounded-md shadow-sm my-6 border-[1px] border-[#e0e0e2]">
 
                 <div className="" >
                     <img src={photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />

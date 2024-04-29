@@ -1,0 +1,26 @@
+[
+    {
+        "photo": "https://i.ibb.co/6J1RyJZ/cat1.jpg",
+        "subCategory": "Wooden Furniture & Sculptures"
+    },
+    {
+        "photo": "https://i.ibb.co/18rxDBS/cat2.jpg",
+        "subCategory": "Wooden Home Decor"
+    },
+    {
+        "photo": "https://i.ibb.co/dPYf9LM/cat3.jpg",
+        "subCategory": "Wooden Utensils & Kitchenware"
+    },
+    {
+        "photo": "https://i.ibb.co/zfR7Sfc/cat4.jpg",
+        "subCategory": "Jute Home Decor"
+    },
+    {
+        "photo": "https://i.ibb.co/pdF19s9/cat5.jpg",
+        "subCategory": "Jute Kitchenware & Utensils"
+    },
+    {
+        "photo": "https://i.ibb.co/r7pYLzc/cat6.jpg",
+        "subCategory": "Jute & Wooden Jewellery"
+    }
+]
