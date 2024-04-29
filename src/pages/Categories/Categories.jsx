@@ -20,7 +20,7 @@ const Categories = () => {
                 <h1 className="text-4xl font-bold">Our Categories</h1>
                 <p className="lg:w-[60%]">Discover our carefully curated categories, where eco-conscious crafting meets boundless imagination. Unleash your creativity sustainably with our diverse selection of handmade wonders</p>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 bg-violet-200 lg:p-6 p-4  rounded-lg shadow-xl">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 rounded-lg shadow-sm">
                 {
                     categories.map(category => <CategoriesCard
                         category={category}

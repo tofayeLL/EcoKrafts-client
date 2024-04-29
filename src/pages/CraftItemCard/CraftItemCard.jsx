@@ -16,7 +16,7 @@ const CraftItemCard = ({ craft }) => {
                     <img src={photo} alt="" className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
                 </div>
 
-                <div className="flex flex-col justify-between p-6 space-y-8" data-aos="fade-up">
+                <div className="flex flex-col justify-between p-6 space-y-8" >
                     <div className="space-y-4" >
 
                         <h2 className="text-xl font-semibold tracking-wide text-violet-800 ">{name}</h2>

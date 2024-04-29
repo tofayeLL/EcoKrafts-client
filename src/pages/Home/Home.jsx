@@ -1,21 +1,26 @@
 import Categories from "../Categories/Categories";
 import Banner from "./Banner";
 import CraftItem from "./CraftItem";
+import OurGallery from "./OurGallery";
 
 
 const Home = () => {
     return (
-        <div className="space-y-20">
-            <div >
+        <div >
+            <div className="my-20">
                 <Banner></Banner>
             </div>
 
-            <div >
+            <div className="my-20">
                 <CraftItem></CraftItem>
             </div>
 
-            <div>
+            <div className="my-20">
                 <Categories></Categories>
+            </div>
+            <div className="my-20">
+                <OurGallery></OurGallery>
+
             </div>
         
             

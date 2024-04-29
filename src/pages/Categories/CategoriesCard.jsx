@@ -8,7 +8,7 @@ const CategoriesCard = ({ category }) => {
         <div>
 
 
-            <Link to={`/crafts/${subCategory}`}>
+            <Link to={`/categories/${subCategory}`}>
 
 
 
