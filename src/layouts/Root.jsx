@@ -13,7 +13,7 @@ const Root = () => {
 
             <div className="container mx-auto lg:px-8 px-2">
                 {/* this is nav */}
-                <div className="sticky top-0 z-50 mb-8">
+                <div className="sticky top-0 z-50">
                     <Nav></Nav>
                 </div>
 

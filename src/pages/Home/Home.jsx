@@ -7,7 +7,7 @@ import OurGallery from "./OurGallery";
 const Home = () => {
     return (
         <div >
-            <div className="my-20">
+            <div className="lg:my-6 my-4">
                 <Banner></Banner>
             </div>
 
