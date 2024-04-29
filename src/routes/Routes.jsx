@@ -11,6 +11,7 @@ import CraftItemDetails from "../pages/CraftItemDetails/CraftItemDetails";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
 import AllCrafts from "../pages/AllCrafts/AllCrafts";
 import AllCraftDetails from "../pages/AllCrafts/AllCraftDetails";
+import CategoriesDetails from "../pages/Categories/CategoriesDetails";
 
 
 
@@ -63,6 +64,11 @@ const router = createBrowserRouter([
         path: '/craft/:id',
         element: <ProtectedRoutes><AllCraftDetails></AllCraftDetails></ProtectedRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5000/craft/${params.id}`)
+      },
+      {
+        path:'/crafts/:subCategory',
+        element:<CategoriesDetails></CategoriesDetails>,
+        loader:({params}) => fetch(`http://localhost:5000/crafts/${params.subCategory}`)
       }
 
 
