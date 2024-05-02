@@ -11,7 +11,7 @@ const CustomersSay = () => {
             <section className="my-8 border-[1px] border-[#e0e0e2] rounded-md bg-violet-200 ">
 
                 <div className="container lg:ml-20 flex flex-col justify-start items-start mx-auto mb-8 mt-6 md:p-6 md:px-12">
-                    <h1 className="p-4 text-4xl font-bold leading-none text-center">What Our Customers Say About us</h1>
+                    <h1 className="p-4 text-4xl font-bold leading-none text-black text-center">What Our Customers Say About us</h1>
                 </div>
 
 
@@ -20,7 +20,7 @@ const CustomersSay = () => {
                     {/* client 1 */}
                     <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
 
-                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-slate-200">
+                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-base-200">
                             <p className="relative px-7 py-1 text-lg italic text-center ">
                                
                             EcoKrafts website made finding sustainable products a  breeze! Love  the user-friendly interface
@@ -39,10 +39,10 @@ const CustomersSay = () => {
                     {/* client 2*/}
                     <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
 
-                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-slate-200">
+                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-base-200">
                             <p className="relative px-7 py-1 text-lg italic text-center ">
                                
-                            Impressed with EcoKrafts' website design; it reflects their commitment to eco-friendly living seamlessly
+                            Impressed with EcoKrafts website design; it reflects their commitment to eco-friendly living seamlessly
                                
                             </p>
                         </div>
@@ -58,7 +58,7 @@ const CustomersSay = () => {
                     {/* client 3 */}
                     <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
 
-                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-slate-200">
+                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-base-200">
                             <p className="relative px-7 py-1 text-lg italic text-center ">
                                
                             EcoKrafts website is not just a marketplace but a platform for eco-conscious living. A great experience overall!
@@ -77,10 +77,10 @@ const CustomersSay = () => {
                     {/* client 4 */}
                     <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
 
-                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-slate-200">
+                        <div className="px-4 py-20 rounded-t-lg sm:px-8 md:px-12 bg-base-200">
                             <p className="relative px-7 py-1 text-lg italic text-center ">
                                
-                            Navigating EcoKrafts' website was intuitive, and their range of sustainable products is impressive
+                            Navigating EcoKrafts website was intuitive, and their range of sustainable products is impressive
                             </p>
                         </div>
 

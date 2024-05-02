@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
     return (
@@ -10,8 +11,8 @@ const Footer = () => {
                     <div className="container lg:px-20 md:px-14 flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0  ">
                         <div className="lg:w-1/3">
                             <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
-                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-violet-400">
-                                    <img className="p-1" src='' alt="" />
+                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-base-200">
+                                    <img className="p-1" src={logo} alt="" />
                                 </div>
                                 <span className="self-center text-2xl font-semibold">Eco<span className="text-purple-600">Krafts</span></span>
                             </a>

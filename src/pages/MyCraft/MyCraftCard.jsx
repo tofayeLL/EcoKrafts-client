@@ -3,7 +3,7 @@ import { FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyCraftCard = ({ craft, myCrafts, setMyCrafts }) => {
+const MyCraftCard = ({ craft, filterCrafts, setFilterCrafts }) => {
     const { _id, photo, name, price, rating, customization, stockStatus } = craft;
 
 
@@ -37,8 +37,8 @@ const MyCraftCard = ({ craft, myCrafts, setMyCrafts }) => {
                                 });
 
                                 // delete from layout
-                                const remainingCraft = myCrafts.filter(kraft => kraft._id !== _id);
-                                setMyCrafts(remainingCraft);
+                                const remainingCraft = filterCrafts.filter(kraft => kraft._id !== _id);
+                                setFilterCrafts(remainingCraft);
 
                             }
                         })

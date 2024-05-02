@@ -50,7 +50,7 @@ const AddCraft = () => {
                         confirmButtonText: 'Cool'
                     })
                     form.reset();
-                    
+
                 }
             })
 

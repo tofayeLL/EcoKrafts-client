@@ -26,7 +26,7 @@ import image18 from '../../assets/images/craft8.jpg';
 import image19 from '../../assets/images/craft9.jpg';
 import image20 from '../../assets/images/slide1.jpg';
 import image21 from '../../assets/images/slide2.jpg';
-import { Typewriter } from 'react-simple-typewriter';
+
 
 
 
@@ -45,18 +45,7 @@ const OurGallery = () => {
                 <div className='App'>
 
                     <h1 className="text-4xl font-bold " >
-
-
-                        <Typewriter
-                            words={['Our Gallery']}
-                            loop={5}
-                            cursor
-                            cursorStyle=''
-                            typeSpeed={70}
-                            deleteSpeed={50}
-                            delaySpeed={1000}
-
-                        />
+                        Our Gallery
 
                     </h1>
 

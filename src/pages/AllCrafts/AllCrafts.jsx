@@ -14,11 +14,11 @@ const AllCrafts = () => {
             
 
 
-            <div className="overflow-x-auto bg-white border-[1px] border-[#e0e0e2] rounded-md">
+            <div className="overflow-x-auto  border-[1px] border-[#e0e0e2] rounded-md">
                 <table className="table ">
 
                     <thead>
-                        <tr className="bg-slate-200 text-lg font-semibold ">
+                        <tr className="bg-base-200 text-lg font-semibold ">
                             <th>Craft Name</th>
                             <th>Price</th>
                             <th>Customization</th>

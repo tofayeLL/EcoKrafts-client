@@ -64,8 +64,8 @@ const MyCraft = () => {
                 {
                     filterCrafts.map(craft => <MyCraftCard
                         craft={craft}
-                        setMyCrafts={setMyCrafts}
-                        myCrafts={myCrafts}
+                        setFilterCrafts={setFilterCrafts}
+                        filterCrafts={filterCrafts}
                         key={craft._id}></MyCraftCard>)
                 }
             </div>

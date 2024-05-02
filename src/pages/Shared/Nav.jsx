@@ -36,16 +36,16 @@ const Nav = () => {
             });
     }
 
-    // theme handler
+    // theme useEffects for store theme in local storage
 
     useEffect(() => {
-      localStorage.setItem('theme', theme);
-      const localTheme = localStorage.getItem('theme');
-      document.querySelector('html').setAttribute('data-theme', localTheme);
+        localStorage.setItem('theme', theme);
+        const localTheme = localStorage.getItem('theme');
+        document.querySelector('html').setAttribute('data-theme', localTheme);
     }, [theme])
 
 
-
+    //   theme handler
     const handleTheme = (e) => {
         if (e.target.checked) {
             setTheme('synthwave');
@@ -54,7 +54,7 @@ const Nav = () => {
             setTheme('light')
         }
     }
-    console.log(theme);
+
 
 
 
