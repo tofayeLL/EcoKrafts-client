@@ -23,7 +23,7 @@ const MyCraftCard = ({ craft, filterCrafts, setFilterCrafts }) => {
             .then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/myCrafts/${_id}`, {
+                    fetch(`https://eco-krafts-server.vercel.app/myCrafts/${_id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())

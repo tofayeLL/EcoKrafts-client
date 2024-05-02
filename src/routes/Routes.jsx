@@ -47,28 +47,28 @@ const router = createBrowserRouter([
       {
         path: '/crafts/:id',
         element: <ProtectedRoutes><CraftItemDetails></CraftItemDetails></ProtectedRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
+        loader: ({ params }) => fetch(`https://eco-krafts-server.vercel.app/crafts/${params.id}`)
       },
       {
         path: '/myCraft/:id',
         element: <ProtectedRoutes><UpdateCraft></UpdateCraft></ProtectedRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/myCraft/${params.id}`)
+        loader: ({ params }) => fetch(`https://eco-krafts-server.vercel.app/myCraft/${params.id}`)
 
       },
       {
         path: '/allCrafts',
         element: <AllCrafts></AllCrafts>,
-        loader: () => fetch('http://localhost:5000/crafts')
+        loader: () => fetch('https://eco-krafts-server.vercel.app/crafts')
       },
       {
         path: '/craft/:id',
         element: <ProtectedRoutes><AllCraftDetails></AllCraftDetails></ProtectedRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/craft/${params.id}`)
+        loader: ({ params }) => fetch(`https://eco-krafts-server.vercel.app/craft/${params.id}`)
       },
       {
         path: '/categories/:subCategory',
         element: <CategoriesDetails></CategoriesDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.subCategory}`)
+        loader: ({ params }) => fetch(`https://eco-krafts-server.vercel.app/categories/${params.subCategory}`)
       }
 
 

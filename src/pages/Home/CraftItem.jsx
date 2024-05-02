@@ -9,7 +9,7 @@ const CraftItem = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/crafts')
+        fetch('https://eco-krafts-server.vercel.app/crafts')
             .then(res => res.json())
             .then(data => {
 

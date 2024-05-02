@@ -32,7 +32,7 @@ const AddCraft = () => {
         console.log(craft);
 
         // post
-        fetch('http://localhost:5000/crafts', {
+        fetch('https://eco-krafts-server.vercel.app/crafts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

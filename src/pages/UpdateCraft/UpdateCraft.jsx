@@ -26,7 +26,7 @@ const UpdateCraft = () => {
         console.log(craft);
 
         // update craft
-        fetch(`http://localhost:5000/myCraft/${_id}`, {
+        fetch(`https://eco-krafts-server.vercel.app/myCraft/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

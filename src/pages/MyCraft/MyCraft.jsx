@@ -10,7 +10,7 @@ const MyCraft = () => {
     const { user } = useContext(AUthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myCrafts/${user.email}`)
+        fetch(`https://eco-krafts-server.vercel.app/myCrafts/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyCrafts(data);
