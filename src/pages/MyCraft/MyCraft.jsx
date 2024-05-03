@@ -5,6 +5,7 @@ import MyCraftCard from "./MyCraftCard";
 
 const MyCraft = () => {
     const [myCrafts, setMyCrafts] = useState([]);
+    const [filterCrafts, setFilterCrafts] = useState([]);
 
     const { user } = useContext(AUthContext);
 
@@ -12,16 +13,56 @@ const MyCraft = () => {
         fetch(`http://localhost:5000/myCrafts/${user.email}`)
             .then(res => res.json())
             .then(data => {
-                setMyCrafts(data)
+                setMyCrafts(data);
+                setFilterCrafts(data);
+
             })
     }, [user])
 
+
+    // filter craft data depends on customization
+    const handleFilter = (filter) => {
+        if(filter === 'yes'){
+            const customizationYes = myCrafts.filter( craft => craft.customization === 'yes');
+            setFilterCrafts(customizationYes);
+        }
+        else if(filter === 'no'){
+            const customizationNo = myCrafts.filter(craft => craft.customization === 'no');
+            setFilterCrafts(customizationNo);
+        }
+    }
+
+
+
+
+
+
+
+
     return (
         <div>
-            <h1>My Craft:{myCrafts.length}</h1>
+
+
+            <div className="mt-10">
+                <details className="dropdown">
+                    <summary className="m-1 btn bg-violet-400 text-lg text-gray-800">Customization</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        <li onClick={() => handleFilter('yes')}><a>Yes</a></li>
+                        <li onClick={() => handleFilter('no')}><a>No</a></li>
+                        
+                    </ul>
+                </details>
+
+            </div>
+
+
+
+
+
+
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                 {
-                    myCrafts.map(craft => <MyCraftCard
+                    filterCrafts.map(craft => <MyCraftCard
                         craft={craft}
                         setMyCrafts={setMyCrafts}
                         myCrafts={myCrafts}

@@ -35,7 +35,7 @@ const CategoryDetailCard = ({ craft }) => {
                         </div>
 
                     </div>
-                    <Link to={`/crafts/${_id}`}> <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-gray-600">View Details</button></Link>
+                    <Link to={`/crafts/${_id}`}> <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md text-gray-800  bg-base-200">View Details</button></Link>
                 </div>
 
             </div>

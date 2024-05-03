@@ -46,7 +46,7 @@ const router = createBrowserRouter([
 
       {
         path: '/crafts/:id',
-        element: <CraftItemDetails></CraftItemDetails>,
+        element: <ProtectedRoutes><CraftItemDetails></CraftItemDetails></ProtectedRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
       },
       {
@@ -66,9 +66,9 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/craft/${params.id}`)
       },
       {
-        path:'/categories/:subCategory',
-        element:<CategoriesDetails></CategoriesDetails>,
-        loader:({params}) => fetch(`http://localhost:5000/categories/${params.subCategory}`)
+        path: '/categories/:subCategory',
+        element: <CategoriesDetails></CategoriesDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.subCategory}`)
       }
 
 

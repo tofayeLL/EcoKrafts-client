@@ -16,7 +16,7 @@ const Categories = () => {
     return (
         <div>
 
-            <div className="space-y-3 lg:my-6">
+            <div className="space-y-4 lg:my-6">
                 <h1 className="text-4xl font-bold">Our Categories</h1>
                 <p className="lg:w-[60%]">Discover our carefully curated categories, where eco-conscious crafting meets boundless imagination. Unleash your creativity sustainably with our diverse selection of handmade wonders</p>
             </div>

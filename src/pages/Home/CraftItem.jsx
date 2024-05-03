@@ -21,12 +21,10 @@ const CraftItem = () => {
 
     return (
         <div>
-            <h1>Craft Item: {crafts.length}</h1>
-
-
+       
             <div className="space-y-3 lg:my-2">
-                <h1 className="text-3xl font-bold animate__animated animate__backInLeft  animate__delay-0.5s">Featured Craft Collections</h1>
-                <p className="lg:w-[54%]  animate__animated animate__backInRight animate__delay-0.5s ">Explore our curated craft collections, showcasing innovative designs crafted with eco-conscious materials, perfect for those seeking both style and sustainability</p>
+                <h1 className="text-3xl font-bold ">Featured Craft Collections</h1>
+                <p className="lg:w-[54%]  ">Explore our curated craft collections, showcasing innovative designs crafted with eco-conscious materials, perfect for those seeking both style and sustainability</p>
             </div>
 
 

@@ -1,6 +1,7 @@
 import Categories from "../Categories/Categories";
 import Banner from "./Banner";
 import CraftItem from "./CraftItem";
+import CustomersSay from "./CustomersSay";
 import OurGallery from "./OurGallery";
 
 
@@ -20,6 +21,10 @@ const Home = () => {
             </div>
             <div className="my-20">
                 <OurGallery></OurGallery>
+
+            </div>
+            <div className="my-20">
+                <CustomersSay></CustomersSay>
 
             </div>
         

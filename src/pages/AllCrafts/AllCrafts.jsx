@@ -11,12 +11,7 @@ const AllCrafts = () => {
 
     return (
         <div className="">
-            <h1>
-                ALl Crafts: {crafts.length}
-            </h1>
-
-
-
+            
 
 
             <div className="overflow-x-auto bg-white border-[1px] border-[#e0e0e2] rounded-md">
