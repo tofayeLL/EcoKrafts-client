@@ -26,7 +26,7 @@ const CraftItem = () => {
             <div className="space-y-3 lg:my-2">
                 
 
-                <h1 className="text-4xl font-bold " >
+                <h1 className="lg:text-4xl text-2xl font-bold " >
 
 
                     <Typewriter
@@ -41,7 +41,7 @@ const CraftItem = () => {
                     />
 
                 </h1>
-                <p className="lg:w-[54%]  ">Explore our curated craft collections, showcasing innovative designs crafted with eco-conscious materials, perfect for those seeking both style and sustainability</p>
+                <p className="lg:w-[54%] lg:text-lg md:text-lg text-sm ">Explore our curated craft collections, showcasing innovative designs crafted with eco-conscious materials, perfect for those seeking both style and sustainability</p>
             </div>
 
 

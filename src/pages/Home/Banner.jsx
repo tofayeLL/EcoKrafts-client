@@ -13,7 +13,7 @@ const Banner = () => {
         <div >
 
 
-            <div className='relative'>
+            <div className='lg:relative md:relative '>
 
                 <Swiper spaceBetween={30}
                     centeredSlides={true}
@@ -26,7 +26,7 @@ const Banner = () => {
                     }}
                     navigation={true}
                     modules={[Autoplay, Pagination]}
-                    className="mySwiper lg:h-[80vh] h-[60vh]  rounded-lg">
+                    className="mySwiper lg:h-[80vh] md:h-[60vh] h-[35vh] rounded-lg">
 
                     {/* slide 1 */}
                     <SwiperSlide className='bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(https://i.ibb.co/bBwxMsW/slide5.jpg)] bg-center bg-cover'>
@@ -78,9 +78,9 @@ const Banner = () => {
                 </Swiper>
 
 
-                <div className=' absolute flex flex-col justify-center items-center translate-y-[-60vh]  py-6 text-white z-10 w-full lg:px-10 px-3'>
+                <div className=' lg:absolute md:absolute flex flex-col justify-center items-center lg:translate-y-[-60vh] md:translate-y-[-60vh] lg:flex md:flex hidden py-6 text-white z-10 w-full lg:px-10 px-3 '>
                     <div className='lg:space-y-6 md:space-y-3 space-y-2 text-center  '>
-                        <h1 className='lg:text-5xl text-xl font-bold'>
+                        <h1 className='lg:text-5xl text-xl font-bold '>
                             <Typewriter
                                 words={['Eco-Friendly Creations at EcoCrafts']}
                                 loop={5}

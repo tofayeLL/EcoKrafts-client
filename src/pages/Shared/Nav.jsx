@@ -80,7 +80,7 @@ const Nav = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost lg:text-4xl  text-lg font-bold gap-0">Eco<span className="text-purple-600 0">Krafts</span> </a>
+                    <a className="btn btn-ghost lg:text-4xl  text-lg font-bold gap-0 ">Eco<span className="text-purple-600 0">Krafts</span> </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2 ">
@@ -106,7 +106,6 @@ const Nav = () => {
 
 
 
-
                     {
                         user ?
                             <div className="flex  justify-center items-center gap-2 ">
@@ -121,13 +120,12 @@ const Nav = () => {
                                     </Tooltip>
 
 
+                                    <img className="w-full rounded-full p-1" alt="user img" src={user?.photoURL || 'https://ibb.co/18JhpwY'} data-tooltip-id="my-tooltip" />
 
-
-
-                                    <img className="w-full rounded-full p-1" alt="Tailwind CSS Navbar component" src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} data-tooltip-id="my-tooltip" />
                                 </div>
 
                                 <button onClick={handleLogout} className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Logout</button>
+                              
 
 
 
@@ -137,14 +135,10 @@ const Nav = () => {
 
                             <div className="lg:space-x-3 space-x-2">
                                 <Link to={'/login'}><button className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Login</button></Link>
-                                <Link to={'/register'}><button className="btn  text-white hover:text-violet-500 font-semibold lg:text-base text-xs  bg-violet-400 0">Register</button></Link>
+                                <Link to={'/register'} className="lg:inline md:inline hidden"><button className="btn  text-white hover:text-violet-500 font-semibold lg:text-base text-xs  bg-violet-400 0">Register</button></Link>
                             </div>
 
                     }
-
-
-
-
 
 
 

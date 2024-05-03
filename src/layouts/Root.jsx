@@ -19,7 +19,7 @@ const Root = () => {
 
                 {/* this is outlet */}
 
-                <div className="container mx-auto ">
+                <div className="container mx-auto">
                     {
                         navigation.state === "loading" ?
 
