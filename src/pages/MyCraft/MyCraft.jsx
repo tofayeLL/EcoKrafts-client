@@ -45,8 +45,8 @@ const MyCraft = () => {
 
             <div className="mt-10">
                 <details className="dropdown">
-                    <summary className="m-1 btn bg-violet-400 text-lg text-gray-800">Customization</summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                    <summary className="m-1 btn bg-violet-300 text-lg text-gray-800">Customization</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40">
                         <li onClick={() => handleFilter('yes')}><a>Yes</a></li>
                         <li onClick={() => handleFilter('no')}><a>No</a></li>
                         

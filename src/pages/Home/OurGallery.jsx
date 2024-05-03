@@ -26,6 +26,7 @@ import image18 from '../../assets/images/craft8.jpg';
 import image19 from '../../assets/images/craft9.jpg';
 import image20 from '../../assets/images/slide1.jpg';
 import image21 from '../../assets/images/slide2.jpg';
+import { Typewriter } from 'react-simple-typewriter';
 
 
 
@@ -38,8 +39,30 @@ const OurGallery = () => {
     return (
 
         <div>
-            <div className="lg:my-8 my-6 flex flex-col justify-center items-center">
-                <h1 className="text-4xl font-bold ">Our Gallery</h1>
+            <div className="lg:my-8 my-6 lg:ml-5">
+
+
+                <div className='App'>
+
+                    <h1 className="text-4xl font-bold " >
+
+
+                        <Typewriter
+                            words={['Our Gallery']}
+                            loop={5}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+
+                        />
+
+                    </h1>
+
+                </div>
+
+
             </div>
 
             <>
@@ -51,7 +74,7 @@ const OurGallery = () => {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                  
+
                     modules={[Autoplay, FreeMode, Pagination]}
                     className="mySwiper "
                 >
@@ -66,105 +89,105 @@ const OurGallery = () => {
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image2} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image2} />
                             </div>
 
 
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image3} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image3} />
                             </div>
 
 
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image5} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image5} />
                             </div>
 
 
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image6} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image6} />
                             </div>
 
 
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image7} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image7} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image8} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image8} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image9} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image9} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image10} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image10} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image11} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image11} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image12} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image12} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image13} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image13} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image14} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image14} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image15} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image15} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image16} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image16} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image17} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image17} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image18} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image18} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image19} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image19} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image20} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image20} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='lg:p-6'>
                             <div className='border-[1px] border-violet-500 lg:p-4 md:p-3 p-2'>
-                            <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image21} />
+                                <img className="object-cover w-full dark:bg-gray-500 aspect-square" src={image21} />
                             </div>
                         </SwiperSlide>
 

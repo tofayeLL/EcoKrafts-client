@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CraftItemCard from "../CraftItemCard/CraftItemCard";
+import { Typewriter } from 'react-simple-typewriter';
 
 
 const CraftItem = () => {
@@ -21,9 +22,25 @@ const CraftItem = () => {
 
     return (
         <div>
-       
+
             <div className="space-y-3 lg:my-2">
-                <h1 className="text-3xl font-bold ">Featured Craft Collections</h1>
+                
+
+                <h1 className="text-4xl font-bold " >
+
+
+                    <Typewriter
+                        words={['Featured Craft Collections']}
+                        loop={5}
+                        cursor
+                        cursorStyle=''
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={1000}
+
+                    />
+
+                </h1>
                 <p className="lg:w-[54%]  ">Explore our curated craft collections, showcasing innovative designs crafted with eco-conscious materials, perfect for those seeking both style and sustainability</p>
             </div>
 
