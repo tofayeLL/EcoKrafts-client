@@ -17,9 +17,9 @@ const Categories = () => {
     return (
         <div>
 
-            <div className="space-y-4 my-6">
+            <div className="space-y-4 my-6 flex flex-col justify-center items-center">
                
-                <h1 className="lg:text-4xl  text-2xl font-bold " >
+                <h1 className="lg:text-5xl  text-2xl font-bold " >
 
 
                     <Typewriter
@@ -36,9 +36,9 @@ const Categories = () => {
                 </h1>
 
 
-                <p className="lg:w-[60%] lg:text-lg md:text-lg text-sm">Discover our carefully curated categories, where eco-conscious crafting meets boundless imagination. Unleash your creativity sustainably with our diverse selection of handmade wonders</p>
+                <p className="lg:w-[60%] lg:text-lg md:text-lg text-sm text-center">Discover our carefully curated categories, where eco-conscious crafting meets boundless imagination. Unleash your creativity sustainably with our diverse selection of handmade wonders</p>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 rounded-lg shadow-sm">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-6 rounded-lg shadow-sm">
                 {
                     categories.map(category => <CategoriesCard
                         category={category}

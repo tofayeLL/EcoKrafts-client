@@ -22,11 +22,11 @@ const MyCraft = () => {
 
     // filter craft data depends on customization
     const handleFilter = (filter) => {
-        if(filter === 'yes'){
-            const customizationYes = myCrafts.filter( craft => craft.customization === 'yes');
+        if (filter === 'yes') {
+            const customizationYes = myCrafts.filter(craft => craft.customization === 'yes');
             setFilterCrafts(customizationYes);
         }
-        else if(filter === 'no'){
+        else if (filter === 'no') {
             const customizationNo = myCrafts.filter(craft => craft.customization === 'no');
             setFilterCrafts(customizationNo);
         }
@@ -43,15 +43,25 @@ const MyCraft = () => {
         <div>
 
 
-            <div className="mt-10">
-                <details className="dropdown">
-                    <summary className="m-1 btn bg-violet-300 text-lg text-gray-800">Customization</summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40">
-                        <li onClick={() => handleFilter('yes')}><a>Yes</a></li>
-                        <li onClick={() => handleFilter('no')}><a>No</a></li>
-                        
-                    </ul>
-                </details>
+            <div >
+
+
+                <div className="flex flex-col gap-3  items-center mb-4 bg-slate-200 py-10">
+
+                    <div className="text-center">
+                        <h1 className="lg:text-3xl text-xl font-semibold text-violet-500">Filter Your Craft Based On Customization </h1>
+                    </div>
+
+                    <details className="dropdown">
+                        <summary className="m-1 btn bg-violet-500 px-6  text-lg text-white">Filter</summary>
+                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40">
+                            <li onClick={() => handleFilter('yes')}><a>Yes</a></li>
+                            <li onClick={() => handleFilter('no')}><a>No</a></li>
+
+                        </ul>
+                    </details>
+
+                </div>
 
             </div>
 

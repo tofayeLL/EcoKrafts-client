@@ -103,9 +103,16 @@ const Login = () => {
                             </div>
                         </div>
 
-
                         <div>
-                            <button className="btn text-white text-lg w-full bg-purple-500" type="submit">Login</button>
+                            {/* daisy ui button */}
+                            {/* <button className="btn text-white text-lg w-full bg-purple-500" type="submit">Login</button> */}
+
+                            <button className="relative inline-flex items-center justify-center  w-full  py-2.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-purple-500 rounded-lg group" type="submit">
+                                <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-lg group-hover:w-full group-hover:h-full"></span>
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                                <span className="relative text-lg font-semibold">Login</span>
+                            </button>
+
                         </div>
 
                         <div className="flex flex-col w-full border-opacity-50 ">
@@ -120,11 +127,28 @@ const Login = () => {
 
 
                     <div className="lg:w-[70%] w-full mx-auto" >
-                        <Link><button onClick={handleGoogleLogin} className="btn w-full bg-purple-500 text-white"><FaGoogle className="text-2xl" ></FaGoogle> <span className="text-lg">Login with Google</span></button></Link>
+                        {/* daisy ui button */}
+                        {/* <Link><button onClick={handleGoogleLogin} className="btn w-full bg-purple-500 text-white"><FaGoogle className="text-2xl" ></FaGoogle> <span className="text-lg">Login with Google</span></button></Link> */}
+
+                        <button onClick={handleGoogleLogin} className="relative inline-flex items-center justify-center  w-full  py-2.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-purple-500 rounded-lg group" type="submit">
+                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-lg group-hover:w-full group-hover:h-full"></span>
+                            <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                            <span className="relative text-lg gap-2  font-semibold flex items-center justify-center"><FaGoogle className="text-2xl" ></FaGoogle>Login with Google</span>
+                        </button>
+
+
+
                     </div>
 
                     <div className="lg:w-[70%] w-full mx-auto">
-                        <Link><button onClick={handleGitLogin} className="btn w-full bg-purple-500 text-white"><FaGithub className="text-2xl"></FaGithub><span className="text-lg">Login with Github</span></button></Link>
+                        {/* daisy ui button */}
+                        {/*   <Link><button onClick={handleGitLogin} className="btn w-full bg-purple-500 text-white"><FaGithub className="text-2xl"></FaGithub><span className="text-lg">Login with Github</span></button></Link> */}
+
+                        <button onClick={handleGitLogin} className="relative inline-flex items-center justify-center  w-full  py-2.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-purple-500 rounded-lg group" type="submit">
+                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-lg group-hover:w-full group-hover:h-full"></span>
+                            <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                            <span className="relative text-lg gap-2  font-semibold flex items-center justify-center"><FaGithub className="text-2xl"></FaGithub>Login with Github</span>
+                        </button>
                     </div>
 
 

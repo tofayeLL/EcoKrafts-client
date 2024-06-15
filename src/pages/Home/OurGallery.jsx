@@ -44,7 +44,7 @@ const OurGallery = () => {
 
                 <div className='App'>
 
-                    <h1 className="lg:text-4xl text-2xl  font-bold " >
+                    <h1 className="lg:text-5xl text-2xl  font-bold flex flex-col justify-center items-center " >
                         Our Gallery
 
                     </h1>

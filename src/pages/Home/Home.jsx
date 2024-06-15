@@ -8,22 +8,22 @@ import OurGallery from "./OurGallery";
 const Home = () => {
     return (
         <div >
-            <div className="lg:mt-7 md:mt-7 mt-3">
+            <div className="">
                 <Banner></Banner>
             </div>
 
-            <div className="lg:my-20 my-10">
+            <div className="lg:my-20 my-10 lg:px-4">
                 <CraftItem></CraftItem>
             </div>
 
-            <div className="lg:my-20 my-12">
+            <div className="lg:my-20 my-12 lg:px-4">
                 <Categories></Categories>
             </div>
-            <div className="lg:my-20 my-12">
+            <div className="lg:my-20 my-12 lg:px-4">
                 <OurGallery></OurGallery>
 
             </div>
-            <div className="lg:my-20 my-12">
+            <div className="lg:my-20 my-12 lg:px-4">
                 <CustomersSay></CustomersSay>
 
             </div>

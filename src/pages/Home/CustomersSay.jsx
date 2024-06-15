@@ -10,8 +10,8 @@ const CustomersSay = () => {
 
             <section className="my-8 border-[1px] border-[#e0e0e2] rounded-md bg-violet-200 ">
 
-                <div className="container lg:ml-20  flex flex-col lg:justify-start md:justify-center lg:items-start md:items-center mx-auto mb-8 mt-6 md:p-6 md:px-12">
-                    <h1 className="p-4 lg:text-4xl md:text-2xl text-xl font-bold leading-none text-black text-center">What Our Customers Say About us</h1>
+                <div className="container lg:ml-20  flex flex-col lg:justify-center md:justify-center lg:items-center md:items-center mx-auto mb-8 mt-6 md:p-6 md:px-12">
+                    <h1 className="p-4 lg:text-5xl md:text-2xl text-xl font-bold leading-none text-black text-center">What Our Customers Say About us</h1>
                 </div>
 
 

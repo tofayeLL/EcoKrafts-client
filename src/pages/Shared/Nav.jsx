@@ -67,7 +67,7 @@ const Nav = () => {
 
 
 
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 shadow-lg py-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -124,8 +124,14 @@ const Nav = () => {
 
                                 </div>
 
-                                <button onClick={handleLogout} className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Logout</button>
-                              
+                                {/* <button onClick={handleLogout} className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Logout</button> */}
+                                <button onClick={handleLogout}  className="relative inline-flex items-center justify-center px-3 py-1.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-violet-400 rounded-lg group">
+                                    <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
+                                    <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                                    <span className="relative">Logout</span>
+                                </button>
+
+
 
 
 
@@ -134,8 +140,35 @@ const Nav = () => {
                             :
 
                             <div className="lg:space-x-3 space-x-2">
-                                <Link to={'/login'}><button className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Login</button></Link>
-                                <Link to={'/register'} className="lg:inline md:inline hidden"><button className="btn  text-white hover:text-violet-500 font-semibold lg:text-base text-xs  bg-violet-400 0">Register</button></Link>
+                                {/*      <Link to={'/login'}><button className="btn text-white hover:text-violet-500 font-semibold lg:text-base text-xs bg-violet-400 0">Login</button></Link>
+                                <Link to={'/register'} className="lg:inline md:inline hidden"><button className="btn  text-white hover:text-violet-500 font-semibold lg:text-base text-xs  bg-violet-400 0">Register</button></Link> */}
+
+
+
+                                <Link to={'/login'}>
+
+                                    <button className="relative inline-flex items-center justify-center px-3 py-1.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-violet-400 rounded-lg group">
+                                        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
+                                        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                                        <span className="relative">Login</span>
+                                    </button>
+
+                                </Link>
+
+                                <Link to={'/register'}>
+
+                                    <button className="relative inline-flex items-center justify-center px-3 py-1.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-violet-400 rounded-lg group">
+                                        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
+                                        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900"></span>
+                                        <span className="relative">Register</span>
+                                    </button>
+
+                                </Link>
+
+
+
+
+
                             </div>
 
                     }

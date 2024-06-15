@@ -1,6 +1,6 @@
 
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AUthContext } from "../../providers/AuthProvider";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +11,12 @@ const Register = () => {
     const [showPass, setShowPass] = useState(false);
     const [errorRegister, setErrorRegister] = useState('');
     const { createUser, updateUser } = useContext(AUthContext);
+
+    // after register user redirect to the login page
+   const navigate = useNavigate();
+
+
+
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -42,6 +48,7 @@ const Register = () => {
                 console.log(result.user);
                 toast.success("Registration complete Successfully");
                 updateUser(name, photo);
+                navigate('/login')
                 e.target.reset();
             })
             .catch((error) => {
@@ -104,7 +111,15 @@ const Register = () => {
 
 
                         <div>
-                            <button className="btn text-white text-lg w-full bg-purple-600" type="submit">Register</button>
+                            {/* daisy ui button */}
+                            {/*   <button className="btn text-white text-lg w-full bg-purple-600" type="submit">Register</button> */}
+
+                            <button className="relative inline-flex items-center justify-center  w-full  py-2.5 overflow-hidden font-mono font-medium tracking-tighter text-white bg-purple-500 rounded-lg group" type="submit">
+                                <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-800 rounded-lg group-hover:w-full group-hover:h-full"></span>
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-900  "></span>
+                                <span className="relative text-lg font-semibold">Register</span>
+                            </button>
+
                         </div>
 
 

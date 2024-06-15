@@ -11,15 +11,15 @@ const Root = () => {
 
 
 
-            <div className="container mx-auto lg:px-8 px-2">
+            <div className=" lg:px-0 md:px-2 px-2">
                 {/* this is nav */}
-                <div className="sticky top-0 z-50">
+                <div className="sticky top-0 z-50 ">
                     <Nav></Nav>
                 </div>
 
                 {/* this is outlet */}
 
-                <div className="container mx-auto">
+                <div className="">
                     {
                         navigation.state === "loading" ?
 
